@@ -163,23 +163,6 @@ if fl is not None:
         color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
         selected_color_theme = st.sidebar.selectbox('Select a color theme', color_theme_list)
 
-
-        # Sidebar option to navigate between Data Preview and Dashboard
-        st.sidebar.title("Navigation")
-        if st.sidebar.button('Data Preview'):
-            st.session_state.page = 'data_preview'
-        if st.sidebar.button('Dashboard'):
-            st.session_state.page = 'dashboard'
-    
-        # Page-specific rendering
-        if st.session_state.page == 'data_preview':
-            st.title("Data Preview")
-            st.dataframe(df)  # Display the dataset as a dataframe
-        
-        elif st.session_state.page == 'dashboard':
-            # Dashboard Main Panel
-            col = st.columns((1.5, 4, 2.5), gap='medium')
-
         #End of extra data 
         # Dashboard Main Panel
         col = st.columns((1.5, 4, 2.5), gap='medium')
